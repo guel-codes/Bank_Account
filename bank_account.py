@@ -26,6 +26,28 @@ while exit_status.lower() != 'q':
             print(f"Your current balance is {bank_account.balance} doll hairs")
         else:
             print('You do not have enough money')
-    exit_status = input("Hit any key to continue or 'q' to quit")
+    
 
+    if choice == 2:
+        if bank_account.check_balance(3) and bank_account.is_balance_positive():
+            bank_account.make_withdrawal(3)
+            print(f"Your current balance is {bank_account.balance} doll hairs")
+        else:
+            print('You do not have enough money')
+    
+
+    if choice == 3:
+        if bank_account.check_balance(40) and bank_account.is_balance_positive():
+            bank_account.make_withdrawal(40)
+            print(f"Your current balance is {bank_account.balance} doll hairs")
+        else:
+            print('You do not have enough money')
+    
+
+    if choice == 4:
+        amount = int(input('Please enter deposit amount: '))
+        bank_account.add_deposit(amount)
+        print(f"Your current balance is {bank_account.balance} doll hairs")
+
+exit_status = input("Hit any key to continue or 'q' to quit")
 print(bank_account.__dict__)
