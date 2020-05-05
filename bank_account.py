@@ -16,7 +16,6 @@ class BankAccount(object):
 
 bank_account = BankAccount('Miguel')
 bank_account.add_deposit(10)
-bank_account.check_balance(11)
 bank_account.make_withdrawal(11)
 print(bank_account.__dict__)  
 
