@@ -21,9 +21,11 @@ while exit_status.lower() != 'q':
     choice = int(input())
     
     if choice == 1:
-        bank_account.make_withdrawal(5)
-        print(f"Your current balance is{bank_account.balance}")
-        
+        if bank_account.check_balance(5) and bank_account.is_balance_positive():
+            bank_account.make_withdrawal(5)
+            print(f"Your current balance is {bank_account.balance} doll hairs")
+        else:
+            print('You do not have enough money')
     exit_status = input("Hit any key to continue or 'q' to quit")
 
 print(bank_account.__dict__)
