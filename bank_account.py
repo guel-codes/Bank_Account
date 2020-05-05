@@ -49,5 +49,6 @@ while exit_status.lower() != 'q':
         bank_account.add_deposit(amount)
         print(f"Your current balance is {bank_account.balance} doll hairs")
 
-exit_status = input("Hit any key to continue or 'q' to quit")
-print(bank_account.__dict__)
+    
+    exit_status = input("Hit any key to continue or 'q' to quit")
+print(f"Receipt: {bank_account.__dict__} ")
